@@ -1,4 +1,4 @@
-# Pokemon_Turmalina
+# Pokemon Turmalina
 
 Integrantes: Manuel Pastrana Blazquez y Álvaro Pereda Sánchez.
 
