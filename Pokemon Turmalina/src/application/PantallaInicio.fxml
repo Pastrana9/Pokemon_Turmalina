@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="inicioAnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="615.0" prefWidth="618.0" style="-fx-background-color: #8E90F6;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ControllerInicio">
+   <children>
+      <ImageView fitHeight="251.0" fitWidth="450.0" layoutX="84.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/Logo.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="184.0" layoutY="315.0" mnemonicParsing="false" onAction="#ButtonJugar" prefHeight="88.0" prefWidth="251.0" style="-fx-background-color: #4C6A90; -fx-background-radius: 50;" text="Comenzar Partida" textFill="WHITE">
+         <font>
+            <Font size="21.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect></Button>
+      <Button layoutX="184.0" layoutY="447.0" mnemonicParsing="false" onAction="#ButtonSalir" prefHeight="88.0" prefWidth="251.0" style="-fx-background-color: #4C6A90; -fx-background-radius: 50;" text="Salir" textFill="WHITE">
+         <font>
+            <Font size="21.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+   </children>
+</AnchorPane>
