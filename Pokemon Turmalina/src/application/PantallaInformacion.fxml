@@ -2,9 +2,24 @@
 
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ControllerInformacion">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #8E90F6;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ControllerInformacion">
    <children>
-      <Label contentDisplay="CENTER" layoutX="208.0" layoutY="14.0" prefHeight="37.0" prefWidth="184.0" text="BIENVENIDO A PUEBLO SIOFRA" />
+      <Pane layoutX="14.0" layoutY="13.0" prefHeight="373.0" prefWidth="352.0" style="-fx-background-color: #4C6A90; -fx-background-radius: 20;">
+         <children>
+            <Label contentDisplay="CENTER" layoutX="45.0" layoutY="14.0" prefHeight="37.0" prefWidth="263.0" text="¡BIENVENIDO A PUEBLO SIOFRA!" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font></Label>
+         </children></Pane>
+      <Pane layoutX="378.0" layoutY="13.0" prefHeight="373.0" prefWidth="208.0" style="-fx-background-color: #4C6A90; -fx-background-radius: 20;">
+         <children>
+            <Label contentDisplay="CENTER" layoutX="56.0" layoutY="14.0" prefHeight="37.0" prefWidth="97.0" text="OBJETIVOS" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children></Pane>
    </children>
 </AnchorPane>
