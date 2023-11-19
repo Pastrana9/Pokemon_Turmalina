@@ -292,17 +292,17 @@ classDiagram
       }
 
     Main --> PantallaInicio : llama a
-    PantallaInicio --> ControllerInicio : depende de
+    PantallaInicio --o ControllerInicio : depende de
     ControllerInicio --> PantallaMapa : llama a
-    PantallaMapa --> ControllerMapa : depende de
+    PantallaMapa --o ControllerMapa : depende de
     ControllerMapa --> PantallaEquipo : llama a
     ControllerMapa --> PantallaAjustes : llama a
     ControllerMapa --> PantallaLucha : llama a
     ControllerMapa --> PantallaInformacion : llama a
-    PantallaAjustes --> ControllerAjustes : depende de
-    PantallaEquipo --> ControllerEquipo : depende de
-    PantallaLucha -->  ControllerLucha : depende de
-    PantallaInformacion -->  ControllerInformacion : depende de
+    PantallaAjustes --o ControllerAjustes : depende de
+    PantallaEquipo --o ControllerEquipo : depende de
+    PantallaLucha --o  ControllerLucha : depende de
+    PantallaInformacion --o  ControllerInformacion : depende de
 
 
 
