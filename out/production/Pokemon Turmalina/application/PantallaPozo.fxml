@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="PozoAnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="515.0" style="-fx-background-color: #A89679;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ControllerPozo">
+   <children>
+      <ImageView fitHeight="516.0" fitWidth="740.0" layoutX="-1.0" layoutY="-14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/Cueva.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="sprite" fitHeight="62.0" fitWidth="52.0" layoutX="219.0" layoutY="55.0">
+         <image>
+            <Image url="@img/personaje.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="431.0" layoutY="508.0" mnemonicParsing="false" onAction="#Ajustes" prefHeight="33.0" prefWidth="70.0" style="-fx-background-radius: 20; -fx-background-color: #704B10;" text="Ajustes" textFill="WHITE">
+         <effect>
+            <DropShadow />
+         </effect>
+         <font>
+            <Font size="15.0" />
+         </font></Button>
+      <Button layoutX="334.0" layoutY="508.0" mnemonicParsing="false" onAction="#Equipo" prefHeight="33.0" prefWidth="83.0" style="-fx-background-radius: 20; -fx-background-color: #704B10;" text="Tu Equipo" textFill="#f8f8f8">
+         <effect>
+            <DropShadow />
+         </effect>
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+      <Button layoutX="14.0" layoutY="508.0" mnemonicParsing="false" onAction="#Informacion" prefHeight="33.0" prefWidth="284.0" style="-fx-background-radius: 20; -fx-background-color: #704B10;" text="Cueva Granito" textFill="WHITE">
+         <font>
+            <Font name="Hubballi-Regular" size="17.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+         <graphic>
+            <ImageView fitHeight="19.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/misiones.png" />
+               </image>
+               <effect>
+                  <DropShadow />
+               </effect></ImageView>
+         </graphic></Button>
+      <ImageView fitHeight="107.0" fitWidth="98.0" layoutX="222.0" layoutY="195.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/Mewseventeen.gif" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
