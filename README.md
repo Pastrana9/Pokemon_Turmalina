@@ -23,6 +23,37 @@ classDiagram
         +start(Stage pantallaInicio)
         +main(String[] args)
     }
+      class Equipo {
+    - pokemon1: Pokemon
+    - pokemon2: Pokemon
+    - pokemon3: Pokemon
+    - pokemon4: Pokemon
+    - pokemon5: Pokemon
+    - pokemon6: Pokemon
+    + Equipo(Pokemon pokemon1, Pokemon pokemon2, Pokemon pokemon3, Pokemon pokemon4, Pokemon pokemon5, Pokemon pokemon6)
+    + getPokemon1(): Pokemon
+    + getPokemon2(): Pokemon
+    + getPokemon3(): Pokemon
+    + getPokemon4(): Pokemon
+    + getPokemon5(): Pokemon
+    + getPokemon6(): Pokemon
+    + setPokemon1(Pokemon pokemon1)
+  }
+
+  class Pokemon {
+    - nombre: String
+    - vida_total: int
+    - vida: int
+    - nivel: int
+    - genero: char
+    + Pokemon(String nombre, int vida_total, int vida, int nivel, char genero)
+    + getNombre(): String
+    + getVida_total(): int
+    + getVida(): int
+    + setVida(int vida)
+    + getNivel(): int
+    + getGenero(): char
+  }
 
     class ControllerInicio {
         -inicioAnchorPane: AnchorPane
@@ -290,6 +321,32 @@ classDiagram
       class ControllerInformacion {
         +ButtonVolver(ActionEvent event)
       }
+      class ControllerPozo {
+        - PozoAnchorPane: AnchorPane
+        - sprite: ImageView
+        + Ajustes(ActionEvent event)
+        + Equipo(ActionEvent event)
+        + Informacion(ActionEvent event)
+    }
+      class PantallaPozo {
+        - PozoAnchorPane: AnchorPane
+        - sprite: ImageView
+        - fitHeight: double
+        - fitWidth: double
+        - layoutX: double
+        - layoutY: double
+        - pickOnBounds: boolean
+        - preserveRatio: boolean
+        + initialize(URL location, ResourceBundle resources)
+        + Ajustes(ActionEvent event)
+        + Equipo(ActionEvent event)
+        + Informacion(ActionEvent event)
+      }
+      class VentanaNoSalida {
+    - ajustesAnchorPane: AnchorPane
+    - text1: Label
+    - text2: Label
+    }
 
     Main --> PantallaInicio : llama a
     PantallaInicio --o ControllerInicio : depende de
@@ -299,10 +356,13 @@ classDiagram
     ControllerMapa --> PantallaAjustes : llama a
     ControllerMapa --> PantallaLucha : llama a
     ControllerMapa --> PantallaInformacion : llama a
+    ControllerMapa --> PantallaPozo : llama a
+    ControllerMapa --> VentanaNoSalida : llama a
     PantallaAjustes --o ControllerAjustes : depende de
     PantallaEquipo --o ControllerEquipo : depende de
     PantallaLucha --o  ControllerLucha : depende de
     PantallaInformacion --o  ControllerInformacion : depende de
+    PantallaPozo --o  ControllerPozo : depende de
 
 
 
