@@ -10,6 +10,11 @@ En "Pokémon Turmalina", los jugadores exploran Pueblo Siofra, luchan contra otr
 
 Al protagonista se le otorgará un equipo Pokémon con el que tendrá que vencer a todos los entrenadores para poder acabar el juego y así alzarse como el mejor entrenador de Pueblo Siofra.
 
+# Como jugar
+
+El movimiento se basa en el uso de las teclas awsd. Al comienzo del juego aparecerás en el inicio de Pueblo Siofra, con un equipo de pokemons predeterminado. Si tienes dudas de que hacer en en Pueblo Siofra puedes consultar las misiones en el botón que hay en la esquina inferior izquierda.
+
+Una vez que derrotes a un entrenador pokemon no podrás volver a luchar con él. Además, asegurate de explorar bien el mapa.
 
 ---
 # UML
