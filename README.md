@@ -42,7 +42,7 @@ classDiagram
     + getPokemon4(): Pokemon
     + getPokemon5(): Pokemon
     + getPokemon6(): Pokemon
-    + setPokemon1(Pokemon pokemon1)
+    + getListaPokemon(): List<Pokemon>
   }
 
   class Pokemon {
@@ -58,6 +58,7 @@ classDiagram
     + setVida(int vida)
     + getNivel(): int
     + getGenero(): char
+    + getImg(): String
   }
 class AtaqueEspecial{
     <<Interface>>
@@ -73,6 +74,7 @@ class AtaqueEspecial{
   }
   class Blastoise {
     +Blastoise()
+    +ataqueSeguro(): int
   }
   class Bulbasaur {
     +Bulbasaur()
@@ -184,17 +186,33 @@ class AtaqueEspecial{
         -npcHitboxY: double
         -imagenX: double
         -imagenY: double
+        -controllerLucha: ControllerLucha
+        -controllerPozo: ControllerPozo
+        -controllerEquipo: ControllerEquipo
+        -winNpc1: Boolean
+        -winNpc2: Boolean
+        -winNpc3: Boolean
+        -equipo: Equipo
+        +initialize(URL location, ResourceBundle resources)
+        +setEquipo(Equipo equipo)
+        +abrirPantallaFxml(String pantallafxml)
         +fight1(ActionEvent event)
+        +fight2(ActionEvent event)
+        +fight3(ActionEvent event)
+        +NoSalida(ActionEvent event)
         +Ajustes(ActionEvent event)
         +Equipo(ActionEvent event)
         +Informacion(ActionEvent event)
-        +initialize(URL location, ResourceBundle resources)
-        -handleKeyPress(KeyEvent event)
-        -moveSprite(double newX, double newY)
-        -colisionConNpc1(double newX, double newY): boolean
-        -colisionConNpc2(double newX, double newY): boolean
-        -colisionConNpc3(double newX, double newY): boolean
-        -colisionesMapa(double newX, double newY): boolean
+        +Pozo(ActionEvent event)
+        +handleKeyPress(KeyEvent event)
+        +moveSprite(double newX, double newY)
+        +colisionConNpc1(double newX, double newY): boolean
+        +colisionConNpc2(double newX, double newY): boolean
+        +colisionConNpc3(double newX, double newY): boolean
+        +colisionPozo(double newX, double newY): boolean
+        +colisionNoSalida(double newX, double newY): boolean
+        +colisionesMapa(double newX, double newY): boolean
+        +setPosicionJugador(double Xusuario, double Yusuario)
     }
 
     class ControllerAjustes {
@@ -210,8 +228,7 @@ class AtaqueEspecial{
     }
 
     class ControllerEquipo {
-        -equipo: Equipo
-        -lucha: ControllerLucha
+        -idLayout2: GridPane
         -vida: Label
         -vida2: Label
         -vida3: Label
@@ -230,13 +247,29 @@ class AtaqueEspecial{
         -nivel4: Label
         -nivel5: Label
         -nivel6: Label
+        -pb: ProgressBar
+        -pb2: ProgressBar
+        -pb3: ProgressBar
+        -pb4: ProgressBar
+        -pb5: ProgressBar
+        -pb6: ProgressBar
+        -equipo: Equipo
+        -pokemonLucha: Pokemon
         +initialize()
         +setEquipo(Equipo equipo)
+        +elegir1()
         +elegir2()
+        +elegir3()
+        +elegir4()
+        +elegir5()
+        +elegir6()
+        +getPokemonSeleccionado(): Pokemon
+        +Buttonvolver(ActionEvent event)
+        +cerrarVentanaActual()
     }
 
     class PantallaEquipo {
-        -equipoAnchorPane: AnchorPane
+        -idLayout2: GridPane
         -imagen: ImageView
         -imagen2: ImageView
         -imagen3: ImageView
