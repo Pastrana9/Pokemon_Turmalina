@@ -121,8 +121,8 @@ class AtaqueEspecial{
 
     class PantallaInicio {
         -inicioAnchorPane: AnchorPane
-        +ButtonJugar(ActionEvent event)
-        +ButtonSalir(ActionEvent event)
+        +ButtonJugar
+        +ButtonSalir
     }
 
     class PantallaMapa {
@@ -139,27 +139,11 @@ class AtaqueEspecial{
         -arboles: Rectangle
         -arboles1: Rectangle
         -arboles2: Rectangle
-        -Xusuario: double
-        -Yusuario: double
-        -transition: TranslateTransition
-        -distancia: int
-        -hitboxX: double
-        -hitboxY: double
-        -npcHitboxX: double
-        -npcHitboxY: double
-        -imagenX: double
-        -imagenY: double
-        +fight1(ActionEvent event)
-        +Ajustes(ActionEvent event)
-        +Equipo(ActionEvent event)
-        +Informacion(ActionEvent event)
-        +initialize(URL location, ResourceBundle resources)
-        -handleKeyPress(KeyEvent event)
-        -moveSprite(double newX, double newY)
-        -colisionConNpc1(double newX, double newY): boolean
-        -colisionConNpc2(double newX, double newY): boolean
-        -colisionConNpc3(double newX, double newY): boolean
-        -colisionesMapa(double newX, double newY): boolean
+        +fight1()
+        +Ajustes()
+        +Equipo()
+        +Informacion()
+        +Pozo()
     }
 
     class ControllerMapa {
@@ -223,8 +207,8 @@ class AtaqueEspecial{
 
     class PantallaAjustes {
         -ajustesAnchorPane: AnchorPane
-        +ButtonVolver(ActionEvent event)
-        +ButtonTitulo(ActionEvent event)
+        +ButtonVolver
+        +ButtonTitulo
     }
 
     class ControllerEquipo {
@@ -255,7 +239,7 @@ class AtaqueEspecial{
         -pb6: ProgressBar
         -equipo: Equipo
         -pokemonLucha: Pokemon
-        +initialize()
+        +initialize(URL location, ResourceBundle resources)
         +setEquipo(Equipo equipo)
         +elegir1()
         +elegir2()
@@ -312,41 +296,42 @@ class AtaqueEspecial{
         +elegir4()
         +elegir5()
         +elegir6()
+        +Buttonvolver()
     }
  class ControllerLucha {
         -idLayout: GridPane
         -idNombre: Label
         -idNivel: Label
-        -idImagenRival: ImageView
         -idNombreRival: Label
-        -idGeneroRival: ImageView
         -idNivelRival: Label
+        -idPSRival: Label
+        -idPS: Label
+        -idImagenRival: ImageView
+        -idGeneroRival: ImageView
         -idImagen: ImageView
         -idGenero: ImageView
-        -atacar: Button
-        -cambiar: Button
         -idAtaque1: Button
         -idAtaque2: Button
-        -idCancelar: Button
         -idAtaque3: Button
-        -idPSRival: Label
+        -idCancelar: Button
         -idPbRival: ProgressBar
-        -idPS: Label
         -idPb: ProgressBar
         -cuadroTexto: TextArea
         -equipo: Equipo
         -pokemonUsuario: Pokemon
-        -vidaUsuario: int
-        -vidaRival: int
+        -pokemonRival: Pokemon
         -pausa: PauseTransition
+        -turnoUsuario: boolean
+        -turnoRival: boolean
         +initialize()
+        +getEquipo(): Equipo
+        +asignarElementosFx()
+        +asignarElementosFxRival()
+        +cambiarPokemon()
         +setEquipo(Equipo equipo)
+        +setRival(Pokemon pokemonRival)
         +botonAtacar()
         +botonCambiar()
-        +mostrarPSRival()
-        +mostrarVidaRival()
-        +mostrarVida()
-        +mostrarPS()
         +ataqueSeguro()
         +ataqueArriesgado()
         +ataqueMuyArriesgado()
@@ -354,8 +339,9 @@ class AtaqueEspecial{
         +ataqueRival()
         +actualizarVidaUsuario(int damage)
         +actualizarVidaRival(int damage)
+        +Buttonhuir(ActionEvent event)
         +cerrarVentanaActual()
-        +setPokemonUsuario(Pokemon pokemon)
+        +combate()
     }
 
     class PantallaLucha {
@@ -384,57 +370,60 @@ class AtaqueEspecial{
         -vidaUsuario: int
         -vidaRival: int
         -pausa: PauseTransition
-        +initialize()
-        +setEquipo(Equipo equipo)
         +botonAtacar()
         +botonCambiar()
-        +mostrarPSRival()
-        +mostrarVidaRival()
-        +mostrarVida()
-        +mostrarPS()
         +ataqueSeguro()
         +ataqueArriesgado()
         +ataqueMuyArriesgado()
         +cancelar()
-        +ataqueRival()
-        +actualizarVidaUsuario(int damage)
-        +actualizarVidaRival(int damage)
-        +cerrarVentanaActual()
-        +setPokemonUsuario(Pokemon pokemon)
+        +Buttonhuir()
     }
       class PantallaInformacion {
         -informacionAnchorPane: AnchorPane
-        +ButtonVolver(ActionEvent event)
-      }
-    
-      class ControllerInformacion {
-        +ButtonVolver(ActionEvent event)
+        +ButtonVolver()
       }
       class ControllerPozo {
-        - PozoAnchorPane: AnchorPane
-        - sprite: ImageView
-        + Ajustes(ActionEvent event)
-        + Equipo(ActionEvent event)
-        + Informacion(ActionEvent event)
+        -Xusuario: double
+        -Yusuario: double
+        -transition: TranslateTransition
+        -distancia: int
+        -hitboxX: double
+        -hitboxY: double
+        -imagenX: double
+        -imagenY: double
+        -imagenXX: double
+        -imagenYY: double
+        -posicion: ControllerMapa
+        -controllerLucha: ControllerLucha
+        -controllerEquipo: ControllerEquipo
+        -winBoss: Boolean
+        -equipo: Equipo
+        -PozoAnchorPane: AnchorPane
+        -sprite: ImageView
+        +initialize(URL location, ResourceBundle resources)
+        +setEquipo(Equipo equipo)
+        +handleKeyPress(KeyEvent event)
+        +moveSprite(double newX, double newY)
+        +colisionEscalera(double newX, double newY): boolean
+        +colisionBoss(double newX, double newY): boolean
+        +superficie(ActionEvent event)
+        +abrirPantallaFxml(String pantallafxml)
+        +fightBoss(ActionEvent event)
+        +Ajustes(ActionEvent event)
+        +Equipo(ActionEvent event)
+        +Informacion(ActionEvent event)
     }
       class PantallaPozo {
-        - PozoAnchorPane: AnchorPane
-        - sprite: ImageView
-        - fitHeight: double
-        - fitWidth: double
-        - layoutX: double
-        - layoutY: double
-        - pickOnBounds: boolean
-        - preserveRatio: boolean
-        + initialize(URL location, ResourceBundle resources)
-        + Ajustes(ActionEvent event)
-        + Equipo(ActionEvent event)
-        + Informacion(ActionEvent event)
+        -PozoAnchorPane: AnchorPane
+        -sprite: ImageView
+        +Ajustes()
+        +Equipo()
+        +Informacion()
       }
       class VentanaNoSalida {
-    - ajustesAnchorPane: AnchorPane
-    - text1: Label
-    - text2: Label
+        -ajustesAnchorPane: AnchorPane
+        -text1: Label
+        -text2: Label
     }
 
     Main --> PantallaInicio : llama a
@@ -447,10 +436,11 @@ class AtaqueEspecial{
     ControllerMapa --> PantallaInformacion : llama a
     ControllerMapa --> PantallaPozo : llama a
     ControllerMapa --> VentanaNoSalida : llama a
+    VentanaNoSalida --o  ControllerAjustes : depende de
     PantallaAjustes --o ControllerAjustes : depende de
     PantallaEquipo --o ControllerEquipo : depende de
     PantallaLucha --o  ControllerLucha : depende de
-    PantallaInformacion --o  ControllerInformacion : depende de
+    PantallaInformacion --o  ControllerAjustes : depende de
     PantallaPozo --o  ControllerPozo : depende de
     AtaqueEspecial --|> AtaqueEspecialRandom
     Pokemon --|> AtaqueEspecialRandom
