@@ -16,7 +16,18 @@ El movimiento se basa en el uso de las teclas awsd. Al comienzo del juego aparec
 
 Una vez que derrotes a un entrenador pokemon no podrás volver a luchar con él. Además, asegurate de explorar bien el mapa.
 
-# Como jugar
+# Patrón de Diseño Modelo-Vista-Controlador (MVC)
+
+En la arquitectura de nuestro juego (Pokémon Turmalina), hemos optado por implementar el patrón de diseño Modelo-Vista-Controlador (MVC). Este enfoque organizativo es esencial para estructurar el código de manera clara.
+
+En nuestro juego, el Modelo abarca la información relativa a los Pokémon, sus estadísticas, movimientos y cualquier otro aspecto que involucre datos subyacentes.
+
+La Vista es la capa encargada de la presentación y la interfaz de usuario. Aquí se encuentra todo lo relacionado con la visualización de la información para el jugador. En nuestro contexto, la Vista abarca la representación gráfica de los Pokémon, los elementos del juego y la interfaz de usuario.
+
+El Controlador actúa como intermediario entre el Modelo y la Vista. Se encarga de gestionar las interacciones del usuario, interpretando las acciones y actualizando el Modelo en consecuencia. En nuestro juego, el Controlador maneja la entrada del jugador, como las selecciones de Pokémon, los combates y otras interacciones.
+
+
+# Ejecutable
 
 Pokemon Turmalina cuenta con un archivo ejecutable para poder disfrutar del juego. Aunque hay que seguir unos pasos para que se pueda ejecutar correctamente.
     
