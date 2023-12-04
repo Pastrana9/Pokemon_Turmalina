@@ -42,7 +42,7 @@ classDiagram
     + getPokemon4(): Pokemon
     + getPokemon5(): Pokemon
     + getPokemon6(): Pokemon
-    + getListaPokemon(): List<Pokemon>
+    + getListaPokemon(): ArrayList<Pokemon>
   }
 
   class Pokemon {
