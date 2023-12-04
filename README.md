@@ -16,6 +16,35 @@ El movimiento se basa en el uso de las teclas awsd. Al comienzo del juego aparec
 
 Una vez que derrotes a un entrenador pokemon no podrás volver a luchar con él. Además, asegurate de explorar bien el mapa.
 
+# Como jugar
+
+Pokemon Turmalina cuenta con un archivo ejecutable para poder disfrutar del juego. Aunque hay que seguir unos pasos para que se pueda ejecutar correctamente.
+    
+    1.- Tendrás que descargar la carpeta con el nombre de PokemonTurmalinaEjecutable, en la que hay tres archivos, 
+    como se muestra en la foto.
+    
+[![imagen-2023-12-04-231259208.png](https://i.postimg.cc/mrV9BP0z/imagen-2023-12-04-231259208.png)](https://postimg.cc/nsjr1hVp)
+    
+    2.- El primer archivo son las carpetas con las librerias de JavaFX para que funcione correctamente Pokemon Turmalina.
+    
+        El segundo archivo es un .bat que sirve para ejecutar PokemonTurmalina.jar, 
+        ya que en las nuevas versiones de java, donde está hecho Pokemon Turmalina,
+        JavaFx no está dentro de Java por lo que necesitamos unas librerias externas para que funcione el .jar.
+        
+        El tercer archivo es el .jar que contiene todo el juego.
+
+    3.- Este es el paso más importante, se tendrá que editar ejecutable.bat y editar las url que salen en el
+    para que funcione en el ordenador.
+    La primera url debe ser donde se encuentra la lib, que se encuentra dentro de la carpeta javafx-sdk-21.0.1.
+    El segundo url debe ser donde se encuentra PokemonTurmalina.jar
+    Los tres puntos indican que parte de la url se tiene que modificar con la ruta correcta.
+
+[![imagen-2023-12-04-231552293.png](https://i.postimg.cc/5t93BWJz/imagen-2023-12-04-231552293.png)](https://postimg.cc/jD9PT9Lq)
+[![imagen-2023-12-04-231822370.png](https://i.postimg.cc/tg76RqyB/imagen-2023-12-04-231822370.png)](https://postimg.cc/v1FT3d4n)
+
+    
+        
+
 ---
 # UML
 
