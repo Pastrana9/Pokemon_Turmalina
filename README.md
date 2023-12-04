@@ -62,42 +62,53 @@ classDiagram
 class AtaqueEspecial{
     <<Interface>>
     ataqueMuyArriesgado(): int
+    ataqueSeguro(): int
 }
 
   class AtaqueEspecialRandom {
     <<Abstract>>
     +AtaqueEspecialRandom(String nombre,int vidaTotal, int vida , int nivel , char genero, String img)
     +ataqueMuyArriesgado(): int
+    +ataqueSeguro(): int
   }
   class Blastoise {
     +Blastoise()
   }
   class Bulbasaur {
     +Bulbasaur()
+    +ataqueSeguro(): int
   }
   class Charizard {
     +Charizard()
+    +ataqueSeguro(): int
   }
   class Dialga {
     +Dialga()
+    +ataqueSeguro(): int
   }
   class Entei {
     +Entei()
+    +ataqueSeguro(): int
   }
   class Gengar {
     +Gengar()
+    +ataqueSeguro(): int
   }
   class Mew {
     +Mew()
+    +ataqueSeguro(): int
   }
   class Mewtwo {
     +Mewtwo()
+    +ataqueSeguro(): int
   }
   class Rapidash {
     +Rapidash()
+    +ataqueSeguro(): int
   }
   class Snorlax {
     +Snorlax()
+    +ataqueSeguro(): int
   }
 
     class ControllerInicio {
