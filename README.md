@@ -59,6 +59,46 @@ classDiagram
     + getNivel(): int
     + getGenero(): char
   }
+class AtaqueEspecial{
+    <<Interface>>
+    ataqueMuyArriesgado(): int
+}
+
+  class AtaqueEspecialRandom {
+    <<Abstract>>
+    +AtaqueEspecialRandom(String nombre,int vidaTotal, int vida , int nivel , char genero, String img)
+    +ataqueMuyArriesgado(): int
+  }
+  class Blastoise {
+    +Blastoise()
+  }
+  class Bulbasaur {
+    +Bulbasaur()
+  }
+  class Charizard {
+    +Charizard()
+  }
+  class Dialga {
+    +Dialga()
+  }
+  class Entei {
+    +Entei()
+  }
+  class Gengar {
+    +Gengar()
+  }
+  class Mew {
+    +Mew()
+  }
+  class Mewtwo {
+    +Mewtwo()
+  }
+  class Rapidash {
+    +Rapidash()
+  }
+  class Snorlax {
+    +Snorlax()
+  }
 
     class ControllerInicio {
         -inicioAnchorPane: AnchorPane
@@ -368,6 +408,19 @@ classDiagram
     PantallaLucha --o  ControllerLucha : depende de
     PantallaInformacion --o  ControllerInformacion : depende de
     PantallaPozo --o  ControllerPozo : depende de
+    AtaqueEspecial --|> AtaqueEspecialRandom
+    Pokemon --|> AtaqueEspecialRandom
+    AtaqueEspecialRandom --|> Blastoise
+    AtaqueEspecialRandom --|> Bulbasaur
+    AtaqueEspecialRandom --|> Charizard
+    AtaqueEspecialRandom --|> Dialga
+    AtaqueEspecialRandom --|> Entei
+    AtaqueEspecialRandom --|> Gengar
+    AtaqueEspecialRandom --|> Mew
+    AtaqueEspecialRandom --|> Mewtwo
+    AtaqueEspecialRandom --|> Rapidash
+    AtaqueEspecialRandom --|> Snorlax
+
 
 
 
