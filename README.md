@@ -31,8 +31,8 @@ El Controlador actúa como intermediario entre el Modelo y la Vista. Se encarga 
 
 Pokemon Turmalina cuenta con un archivo ejecutable para poder disfrutar del juego. Aunque hay que seguir unos pasos para que se pueda ejecutar correctamente.
     
-    1.- Tendrás que descargar la carpeta con el nombre de PokemonTurmalinaEjecutable, en la que hay tres archivos, 
-    como se muestra en la foto.
+    1.- Tendrás que descargar la carpeta con el nombre de PokemonTurmalinaEjecutable, 
+    en la que hay tres archivos, como se muestra en la foto.
     
 [![imagen-2023-12-04-231259208.png](https://i.postimg.cc/mrV9BP0z/imagen-2023-12-04-231259208.png)](https://postimg.cc/nsjr1hVp)
     
