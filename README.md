@@ -1,6 +1,6 @@
 # Pokemon Turmalina
 
-Integrantes: Manuel Pastrana Blazquez y Álvaro Pereda Sánchez.
+Integrantes: Manuel Pastrana Blázquez y Álvaro Pereda Sánchez.
 
 Pokemon Turmalina es un FanGame de la famosa saga de videojuegos Pokemon.
 
